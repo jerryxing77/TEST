@@ -1,0 +1,8 @@
+{
+  "market": "US",
+  "timezone": "America/New_York",
+  "symbols": ["AAPL", "MSFT", "NVDA", "SPY", "QQQ"],
+  "benchmarks": ["SPY", "QQQ"],
+  "risk_free_rate": 0.04,
+  "report_language": "zh-CN"
+}
