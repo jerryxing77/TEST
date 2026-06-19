@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Title>VBA 自动排产模板</Title>
+  <Author>OpenAI</Author>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9000</WindowHeight>
+  <WindowWidth>13860</WindowWidth>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="Header">
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1"/>
+   <Interior ss:Color="#D9E1F2" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Orders">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">OrderNo</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Product</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Quantity</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">DueDate</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MO-001</Data></Cell>
+    <Cell><Data ss:Type="String">产品A</Data></Cell>
+    <Cell><Data ss:Type="Number">250</Data></Cell>
+    <Cell><Data ss:Type="String">2026-06-22</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MO-002</Data></Cell>
+    <Cell><Data ss:Type="String">产品B</Data></Cell>
+    <Cell><Data ss:Type="Number">80</Data></Cell>
+    <Cell><Data ss:Type="String">2026-06-25</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="Lines">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">LineName</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">DailyCapacity</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">产线1</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">产线2</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="Schedule">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Date</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Line</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">OrderNo</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Product</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">PlannedQty</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">DueDate</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="Instructions">
+  <Table>
+   <Row><Cell ss:StyleID="Header"><Data ss:Type="String">VBA 自动排产模板</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">如果找不到 .xlsx 文件，可以下载本 XML 文件；Excel 可以直接打开它。</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">打开后请另存为 .xlsm。</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">导入 vba/ProductionScheduler.bas，或复制代码到新 Module。</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">运行 CreateProductionScheduleTemplate 检查模板。</Data></Cell></Row>
+   <Row><Cell><Data ss:Type="String">修改 Orders 和 Lines 后运行 BuildProductionSchedule。</Data></Cell></Row>
+  </Table>
+ </Worksheet>
+</Workbook>
